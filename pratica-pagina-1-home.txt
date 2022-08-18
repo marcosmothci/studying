@@ -1,11 +1,5 @@
 Título da página: Relembrando - Growdev
 
-[AQUI VAI UM LINK PARA A PÁGINA "home.html"]
-[AQUI VAI UM LINK PARA A PÁGINA "fullstack.html"]
-[AQUI VAI UM LINK PARA A PÁGINA "https://www.growdev.com.br/starter-uxui"]
-[AQUI VAI UM LINK PARA A PÁGINA "https://www.growdev.com.br/starter-data-science"]
-[AQUI VAI UM LINK PARA A PÁGINA "https://www.growdev.com.br/advanced"]
-
 [AQUI VAI UMA IMAGEM "growdev.png"]
 
 Nosso propósito é acelerar a entrada de pessoas da área de produtos digitais no mercado de trabalho.
