@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3 notas e 1 letra
+        function finalResult () {
+            if (calcMethod.toLowerCase() == "a"){
+                let nota = (firstGrade+secondGrade+thirdGrade)/3
+                document.write(`A média final é ${nota}.`)
+            }else if ((calcMethod.toLowerCase()) == "p"){
+                nota = ((firstGrade*5)+(secondGrade*3)+(thirdGrade*2))/5+3+2
+                document.write(`A média final é ${nota}.`)
+            }
+        }
+        alert("Sistema GROWDEV de Cálculo de Notas");
+        let firstGrade = Number(prompt("Informe a primeira nota: "))
+        let secondGrade = Number(prompt("Informe a segunda nota: "))
+        let thirdGrade = Number(prompt("Informe a terceira nota: "))
+        let calcMethod = prompt("Digite A para média aritmética e P para média ponderada:")
+
+        finalResult();
+
+        //recebe um inteiro -- verdadeiro impar, falso par
+
+        const numero = prompt('informe um numero e descubra se é par ou impar:')
+       numero%2? (document.write(`O numero ${numero} é impar`)):(document.write(`O numero ${numero} é Par`))
+
+        //verifica se é primo
+        const numeroTeste = parseInt(prompt("Digite um numero "));
+        let checkPrimo = true;
+        if (numeroTeste <= 1) {
+        document.write("Numero inválido. Verifique e tente novamente");
+        }
+        else if (numeroTeste > 1) {
+        for (let i = 2; i < numeroTeste; i++) {
+        if (numeroTeste % i == 0) {
+            checkPrimo = false;
+            break;
+        }
+        }      
+        if (checkPrimo) {
+        document.write(`${numeroTeste} é um numero primo`);
+        } else {
+        document.write(`${numeroTeste} não é um numero primo`);
+        }
+        }
+
+        // receba segundos e entregue horas minutos e segundos
+
+            const segundos = prompt('Informe o tempo em segundos: ')
+            const horasResult =  Math.floor(segundos/3600)
+            const minutosResult = Math.floor((segundos - (horasResult*3600))/60) 
+            const segundosResult = Math.floor(segundos - ((horasResult*3600)+(minutosResult*60)))
+            document.write(`${horasResult}:${minutosResult}:${segundosResult}`)
+
+        // verifica se é um numero perfeito
+
+        let numeroPerfeito = prompt('digite um numero e descubra se ele é perfeito: ') 
+
+        function perfectNumber(numeroPerfeito) {
+        let count = 0;
+        for(let i=1;i<=numeroPerfeito/2;i++) {
+            if(numeroPerfeito%i == 0) {
+                count += i;
+                }
+            }
+                if(count == numeroPerfeito && count != 0) {
+                document.write(`${numeroPerfeito} É um numero perfeito`);
+                } else{
+                document.write(numeroPerfeito," não é um numero perfeito");
+            }   
+        } 
+        
+        perfectNumber(numeroPerfeito)
+
+
+        //percorre os 15 e verifica os pares
+        const vetor = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        
+        function checkPares() {
+        for (i=1; i < vetor.length; i++) {
+            i%2==0 ? ( document.write(`${i} é par!<br> `)):(document.write(`${i} é ímpar!<br> `))
+        }
+        }
+        checkPares()
+
+        // percorre os 20 itens e soma
+        const conjunto = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+        const total = conjunto.reduce(function(total, numero){
+              return total + numero;
+                }, 0);
+            console.log(total);
+            document.write(total);
+        /*
+        const conjunto = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+        const total = conjunto.reduce((total, numero) => total + numero, 0);
+        console.log(total);
+        document.write(total);
+        */
+
+        // função que recebe dois vetores e junta
+
+        const nomes = ["joao", "carlos", "heloisa"];
+        const sobrenomes = ["carvalho", "freitas", "silva"];
+        document.write(nomes.concat(sobrenomes));
+
+        //recebe um array e um numero. verifica se numero está no array
+
+        const conjuntoNumeros = [1,2,3,4,5,6,7,8,9];
+        let numeroEncontrar = Number(prompt('Informe o numero a ser procurado no grupo: '));
+                if ((conjuntoNumeros.indexOf(numeroEncontrar))>-1) {
+                    document.write(`O numero ${numeroEncontrar} está dentro do grupo.`)
+                }else {
+                    document.write(`O numero ${numeroEncontrar} NÃO está dentro do grupo.`)
+                };
+
+        // solicita 5 nomes. informa os nomes e depois os nomes na ordem inversa
+
+        const nome1 = prompt('Informe o primeiro nome: ');
+        const nome2 = prompt('Informe o segundo nome: ');
+        const nome3 = prompt('Informe o terceiro nome: ');
+        const nome4 = prompt('Informe o quarto nome: ');
+        const nome5 = prompt('Informe o quinto nome: ');
+        let grupoNomes = [];
+        grupoNomes.push(nome1, nome2, nome3, nome4, nome5);
+        document.write("Nomes: ", grupoNomes,"<br>");
+        document.write("Nomes na ordem inversa: ", grupoNomes.reverse());
+
+    </script>
+</body>
+</html>

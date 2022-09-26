@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* //ex 1
+        const numero =  prompt('digite um numero')
+          if(numero>10) {
+              document.write('É MAIOR QUE 10')
+          }else{ 
+              document.write("NÃO É MAIOR QUE 10")
+          // numero > 10 ? console.log("é maior que 10") : console.log("não é maior que 10.")
+          }
+       /*    //////////////////////////////////////
+          //////////////////////////////////////
+          //EX 2 
+         
+          function aprovaRecuperacao (){
+              let notaRecuperacao = (prompt('Informe sua nota da recuperação: '))
+              if (notaRecuperacao >= 7.5) {
+                  document.write("Ufa! Voce foi aprovado na recuperação! Estude mais no ano que vem para sair de férias mais cedo!")
+              }else {
+                  document.write("Voce rodou, seu burro! Já mandou seu curriculo pro McDonalds? kkkkk")
+              }
+          }
+          
+          alert("SISTEMA DE CALCULO DAS NOTAS - GROWDEV");
+          alert('Para calcular a média, basta informar a nota de cada bimestre.')
+          
+          let bim1 = Number(prompt("Qual sua nota do 1º bimestre? "));
+          let bim2 = Number(prompt("Qual sua nota do 2º bimestre? "));
+          let bim3 = Number(prompt("Qual sua nota do 3º bimestre? "));
+          let bim4 = Number(prompt("Qual sua nota do 4º bimestre? "));
+     
+          let media = (bim1+bim2+bim3+bim4)/4
+          
+          if (media >= 9) {
+              document.write(`Parabéns, voce foi aprovado com conceito A e média final de: ${media}`)
+          }else if (media >= 7.5 && media < 9){
+              document.write(`Parabéns, voce ficou com conceito B e sua média final é ${media}`)
+          }else if (media >= 6.0 && media < 7.5) {
+              alert(`Ops, voce ficou com conceito C e sua média final é ${media}. Voce ficou de recuperação `)
+              aprovaRecuperacao()
+          }else {
+              alert(`Eitaaa, voce ficou com conceito D e sua média final é ${media}. Que vergonha. Voce ficou de recuperação!`)
+              aprovaRecuperacao()
+          }     
+          ///////////////////////////////////////////////////////////////
+          ///////////////////////////////////////////////////////////////
+          
+          // ex3 
+          /*
+  
+          function aposentar() {
+              if (idade >= 65 || tempoTrabalho >= 30  || (idade >= 60 && tempoTrabalho >= 25)){
+                  document.write("Requerer aposentadoria ");
+              }else {
+                  document.write("Não requerer aposentadoria")
+              }
+  
+          }
+  
+          alert("GrowdevRH")
+          let codigoFunc = prompt("Informe o código funcional: ");
+          let anoNasc = Number(prompt("Digite o ano de nascimento do funcionário: "));
+          let anoIngresso = Number(prompt("Informe o ano de ingresso na empresa: "));
+          let anoAtual = new Date();
+          let ano = Number(anoAtual.getFullYear())
+          let idade = ano - anoNasc;
+          let tempoTrabalho = ano - anoIngresso
+          
+          document.write(`O funcionário código ${codigoFunc} tem ${idade} anos e trabalha na empresa há ${tempoTrabalho} anos.`,"<br>")
+          aposentar()
+                  
+          ///////////////////////////////////////////////////////////////
+          ///////////////////////////////////////////////////////////////
+          
+          // ex4  
+  
+          let productName = Number(prompt("digite o nome do produto: "))
+          let productAmount = Number(prompt("informe a quantidade adquirida do produto: "))
+          let productPrice = Number(prompt("qual o valor unitário do produto? "))
+  
+          let total = productAmount * productPrice
+          document.write(`O total sem decontos é de R$${total} <br>`)
+  
+          if (productAmount <= 5){
+              document.write(`Desconto aplicado de 2%. <br> O total a pagar é de R$${total*0.98}`) 
+              }else if (productAmount > 5 && productAmount <= 10){
+                  document.write(`Desconto aplicado de 3%. <br> O total a pagar é de R$${total*0.97}`)
+              }
+              else{
+                  document.write(`Desconto aplicado de 5%. <br> O total a pagar é de R$${total*0.95}`)
+              }
+          ///////////////////////////////////////////////////////////////
+          ///////////////////////////////////////////////////////////////
+  
+        //   EX 5  
+          productCode = prompt('Informe o código do produto: ')
+          if (productCode == 1){ 
+          document.write('Este produto pertence ao grupo: <strong>Alimento Não - Perecível</strong')
+          }else if (productCode < 5) {
+              document.write('Este produto pertence ao grupo: <strong>Alimento Perecível</strong>')
+          }else if (productCode <= 6 ){
+              document.write('Este produto pertence ao grupo: <strong>Vestuário</strong>')
+          }else if (productCode == 7){
+              document.write('Este produto pertence ao grupo: <strong>Higiene pessoal</strong>')
+          }else if (productCode <= 15){
+              document.write('Este produto pertence ao grupo: <strong>Produto de limpeza/ Utensílios Domésticos</strong>')
+          }else {
+              document.write('<strong>Código Inválido. Favor verificar!</strong>')
+          }
+          
+          ///////////////////////////////////////////////////////////////
+          ///////////////////////////////////////////////////////////////
+             //  EX 6  
+         
+          document.write('********<strong>GROWDEV LANCHES</strong>*********<br>')    
+          document.write('CÓDIGO.......PRODUTO.................PREÇO<br>')
+          document.write('100.........CACHORRO QUENTE....R$ 1,70<br>')
+          document.write('101.........BAURU SIMPLES...........R$ 2,30<br>')
+          document.write('102.........BAURU COM OVO.........R$ 2,60<br>')
+          document.write('103.........HAMBURGUER..............R$ 2,40<br>')
+          document.write('104.........CHEESEBURGUER.........R$ 2,50<br>')
+          document.write('105.........REFRIGERANTE.............R$ 1,00<br>')
+                  
+          function takeOrder (){
+              let clientPick = prompt('Insira o código do produto desejado:') 
+              let quantidade = prompt('Informe a quantidade desejada:')
+              
+              if (clientPick == 100){ 
+                  let valorTotal = (quantidade * 1.7);
+               console.log(valorTotal);
+               document.write(`O valor total é de R$${valorTotal}. A Growdev Lanches agradece a preferência`);
+              }else if (clientPick == 101){
+                    valorTotal = quantidade * 2.3;
+                    console.log(valorTotal);
+                    document.write(`O valor total é de R$${valorTotal}. <br> <br> A Growdev Lanches agradece a preferência`);
+              }else if(clientPick == 102){
+                      valorTotal = quantidade * 2.6;
+                      document.write(`O valor total é de R$${valorTotal}. <br> <br> A Growdev Lanches agradece a preferência`);
+              }else if(clientPick == 103){
+                      valorTotal = quantidade * 2.4;
+                      document.write(`O valor total é de R$${valorTotal}. <br> <br> A Growdev Lanches agradece a preferência`);
+              }else if (clientPick == 104){ 
+                      valorTotal = quantidade * 2.5;
+                      document.write(`O valor total é de R$${valorTotal}. <br> A Growdev Lanches agradece a preferência`);
+              }else if (clientPick == 105){               
+                      valorTotal = quantidade * 1.0;
+                      document.write(`O valor total é de R$${valorTotal}. A Growdev Lanches agradece a preferência`);
+              }else {
+                      document.write("código inválido, por favor verifique e tente novamente.")
+                  }
+              }
+                       
+              setTimeout (takeOrder, 2000) */
+    </script>
+</body>
+
+</html>
