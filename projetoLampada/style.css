@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0
+}
+body {
+    display: block;
+    width: 65vw;
+    height: 95vh;
+    margin-left: 38vw
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+#lampada {
+    margin-bottom: 35px;
+    justify-content: center;
+    
+}
